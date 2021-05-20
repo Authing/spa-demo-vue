@@ -4,9 +4,9 @@ import router from './router';
 import { AuthenticationClient } from 'authing-js-sdk';
 
 const authing = new AuthenticationClient({
-	appId: '609e48a0603eb80d4ebcc052',
-	appHost: 'https://spa-demo-vue.authing.cn',
-	redirectUri: 'http://localhost:8080/app',
+	appId: 'APP_ID',
+	appHost: 'https://{你的域名}.authing.cn',
+	redirectUri: 'http://localhost:4000/callback',
 	tokenEndPointAuthMethod: 'none'
 });
 

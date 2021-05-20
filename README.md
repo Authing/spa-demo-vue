@@ -12,7 +12,7 @@ yarn install
 const authing = new AuthenticationClient({
 	appId: 'APP_ID',
 	appHost: 'https://{你的域名}.authing.cn',
-	redirectUri: 'http://localhost:5000/callback'
+	redirectUri: 'http://localhost:4000/callback'
 });
 ```
 
