@@ -1,27 +1,27 @@
-# spa-demo-vue
+# 安装依赖
 
-## Project setup
+运行以下命令安装项目依赖：
 
-```
+```bash
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+# 填写你的应用配置
 
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-
-```
-yarn build
+```js
+const authing = new AuthenticationClient({
+	appId: 'APP_ID',
+	appHost: 'https://{你的域名}.authing.cn',
+	redirectUri: 'http://localhost:5000/callback'
+});
 ```
 
-### Lints and fixes files
+# 运行
 
-```
-yarn lint
+运行本示例程序：
+
+```bash
+$ yarn serve
 ```
 
 # 参考文档
