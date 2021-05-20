@@ -27,3 +27,7 @@ $ yarn serve
 # 参考文档
 
 [Vue 快速开始](https://docs.authing.cn/v2/quickstarts/spa/vue.html)
+
+# License
+
+spa-demo-vue is [MIT licensed](https://github.com/Authing/spa-demo-vue//blob/main/LICENSE)
