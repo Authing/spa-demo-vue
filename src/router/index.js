@@ -11,7 +11,7 @@ const routes = [
 		component: Login
 	},
 	{
-		path: '/app',
+		path: '/callback',
 		name: 'App',
 		component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
 	},
