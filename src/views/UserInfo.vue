@@ -21,11 +21,8 @@ export default {
 	},
 	methods: {
 		handleLogout: function() {
-			let idToken = localStorage.getItem('idToken');
-			console.log(this);
-			this.$authing.buildLogoutUrl({ expert: true, redirectUri: 'http://localhost:8080', idToken });
 			localStorage.clear();
-			window.location.href = 'http://localhost:8080';
+			window.location.href = this.$authing.buildLogoutUrl({ redirectUri: 'http://localhost:4000' });
 		},
 		handleResourc: async function() {
 			try {

@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  inject: ['$authing'],
+
+  mounted: function() {
+		const currentQuery = this.$router.history.current.query;
+		const code = currentQuery.code || '';
+		const codeChallenge = localStorage.getItem('codeChallenge');
+		this.getToken(code, codeChallenge);
+	},
+	methods: {
+		getToken: async function(code, codeChallenge) {
+			let tokenSet = await this.$authing.getAccessTokenByCode(code, { codeVerifier: codeChallenge });
+			const { access_token, id_token } = tokenSet;
+			let userInfo = await this.$authing.getUserInfoByAccessToken(tokenSet.access_token);
+			localStorage.setItem('accessToken', access_token);
+			localStorage.setItem('idToken', id_token);
+			localStorage.setItem('userInfo', JSON.stringify(userInfo));
+			this.$router.push('/user-info');
+		}
+	}
 }
 </script>

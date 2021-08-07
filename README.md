@@ -16,6 +16,8 @@ const authing = new AuthenticationClient({
 });
 ```
 
+注意：这里的域名是 <font color=Red>用户池</font> 的域名
+
 # 运行
 
 运行本示例程序：

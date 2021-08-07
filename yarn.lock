@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@authing/jose@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@authing/jose/-/jose-1.0.3.tgz#38ad8586150c526f38c5d6da5fd0065491217e23"
+  integrity sha512-fSY8kYvEdKqmpIYl32xTqSHLkFlOqTYRpeaqYPQKlYovybxMB+9Y2adXeot/56AH39qEBN0W97o9bdzWIzzoUg==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13":
   version "7.12.13"
   resolved "https://registry.npm.taobao.org/@babel/code-frame/download/@babel/code-frame-7.12.13.tgz?cache=0&sync_timestamp=1612314682452&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fcode-frame%2Fdownload%2F%40babel%2Fcode-frame-7.12.13.tgz#dcfc826beef65e75c50e21d3837d7d95798dd658"
@@ -1817,11 +1822,12 @@ atob@^2.1.2:
   resolved "https://registry.npm.taobao.org/atob/download/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha1-bZUX654DDSQ2ZmZR6GvZ9vE1M8k=
 
-authing-js-sdk@^4.19.5:
-  version "4.19.5"
-  resolved "https://registry.nlark.com/authing-js-sdk/download/authing-js-sdk-4.19.5.tgz?cache=0&sync_timestamp=1620965485594&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fauthing-js-sdk%2Fdownload%2Fauthing-js-sdk-4.19.5.tgz#3a20bfad5d4ef2475e461e6ad9abb3baa027adf3"
-  integrity sha1-OiC/rV1O8kdeRh5q2auzuqAnrfM=
+authing-js-sdk@^4.22.4:
+  version "4.22.4"
+  resolved "https://registry.yarnpkg.com/authing-js-sdk/-/authing-js-sdk-4.22.4.tgz#d267c55a2c34c98991d436669397d247cb0a0469"
+  integrity sha512-F7DoN7pXgsJzjUjeHc26uQCsQGTglUMosRb0ZOPYYfXIbgcqZcRqGKC1EQq2oPA1afIfDKnoxKlhyxU+msUM3g==
   dependencies:
+    "@authing/jose" "^1.0.3"
     axios "^0.19.2"
     crypto-js "^4.0.0"
     jsencrypt "^3.1.0"
