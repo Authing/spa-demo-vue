@@ -54,7 +54,21 @@ module.exports = {
     host: 'localhost',
     port: 3000,
     open: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    proxy: {
+      '/oidc/token/introspection': {
+        target: 'https://spa-demo-2022.authing.cn',
+        secure: false,
+        changeOrigin: true
+      }
+    },
+    setup (app, server) {
+      app.post('/oidc/token/introspection', (req, res) => {
+        res.json({
+          a: 'setup-middlewares option GET'
+        })
+      })
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({

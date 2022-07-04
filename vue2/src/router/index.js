@@ -13,10 +13,18 @@ export default new VueRouter({
     name: 'Home',
     path: '/home',
     component: () => import('@/pages/Home')
-  },{
+  }, {
+    name: 'Login',
+    path: '/login',
+    component: () => import('@/pages/Login')
+  }, {
     name: 'Callback',
     path: '/callback',
     component: () => import('@/pages/Callback')
+  }, {
+    name: 'Personal',
+    path: '/personal',
+    component: () => import('@/pages/Personal')
   }, {
     name: 'NotFound',
     path: '/:catchAll(.*)',
