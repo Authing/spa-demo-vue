@@ -1,11 +1,16 @@
 import { AuthenticationClient } from 'authing-js-sdk'
 
 export function enhancedAuthing (Vue, options) {
-  const authing = new AuthenticationClient(options)
+  const enhancedMethods = [enhancedLogin, enhancedLogout, enchancedLoginCallback]
 
-  authing.enhancedLogin = enhancedLogin
-  authing.enhancedLogout = enhancedLogout
-  authing.enchancedLoginCallback = enchancedLoginCallback
+  function enchanceAuthing (_authing) {
+    return enhancedMethods.reduce((_authing, method) => {
+      _authing[method.name] = (...args) => method.apply(_authing, args)
+      return _authing
+    }, _authing)
+  }
+
+  const authing = enchanceAuthing(new AuthenticationClient(options))
 
   Vue.prototype.$authing = authing
 }
