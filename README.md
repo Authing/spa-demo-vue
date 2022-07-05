@@ -183,5 +183,5 @@ export default {
 ```
 ## 资源
 
-- [用户认证 SDK](https://docs.authing.cn/v2/reference/sdk-for-node/authentication/)
+- [用户认证 SDK 所有功能](https://docs.authing.cn/v2/reference/sdk-for-node/authentication/)
 - [论坛社区](https://forum.authing.cn/)
