@@ -1,12 +1,20 @@
 <template>
   <div class="home-container">
-    <div>{{ message }}</div>
-    <HelloWorld></HelloWorld>
+    <div style="margin-bottom: 30px;">{{ message }}</div>
+    <button @click="toLogin">go to login page</button>
   </div>
 </template>
 
 <script scoped setup>
-import HelloWorld from '../components/HelloWorld'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 
 const message = 'This is home page ~~'
+
+const toLogin = () => {
+  router.push({
+    name: 'Login'
+  })
+}
 </script>

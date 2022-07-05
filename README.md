@@ -30,7 +30,7 @@ npm install --save authing-js-sdk
 
 ### 初始化 SDK
 
-参考 [vue2 demo](./vue2/index.js)，修改以下配置为你的应用配置：
+参考 [vue2 demo](./vue2/index.js) 或 [vue3 demo](./vue3/index.js)，修改以下配置为你的应用配置：
 
 ``` javascript
 // 使用 enhancedAuthing.js 增强 Authing JS SDK 能力

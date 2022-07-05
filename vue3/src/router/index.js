@@ -14,9 +14,16 @@ export default createRouter({
     path: '/callback',
     component: () => import('@/pages/Callback')
   }, {
+    name: 'Login',
+    path: '/login',
+    component: () => import('@/pages/Login')
+  }, {
+    name: 'Personal',
+    path: '/personal',
+    component: () => import('@/pages/Personal')
+  }, {
     name: 'NotFound',
     path: '/:catchAll(.*)',
     component: () => import('@/pages/NotFound')
   }]
 })
-
