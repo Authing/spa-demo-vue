@@ -181,7 +181,7 @@ export default {
 }
 </script>
 ```
+## 资源
 
-## 更多
-
-SDK 完整功能可参考：[使用用户认证模块](https://docs.authing.cn/v2/reference/sdk-for-node/authentication/)
+- [使用用户认证模块](https://docs.authing.cn/v2/reference/sdk-for-node/authentication/)
+- [论坛社区](https://forum.authing.cn/)
