@@ -21,15 +21,18 @@ export function enhancedAuthing (Vue, options) {
  * @param {String} codeChallengeMethod 'S256' | 'plain'
  */
 function enhancedLogin (codeChallengeDigestMethod = 'S256', codeChallengeMethod = 'S256') {
+  // 生成一个 code_verifier
   const codeChallenge = this.generateCodeChallenge()
 
   localStorage.setItem('codeChallenge', codeChallenge)
   
+  // 计算 code_verifier 的 SHA256 摘要
   const codeChallengeDigest = this.getCodeChallengeDigest({
     codeChallenge,
     method: codeChallengeDigestMethod
   })
 
+  // 构造 OIDC 授权码 + PKCE 模式登录 URL
   const url = this.buildAuthorizeUrl({
     codeChallenge: codeChallengeDigest, 
     codeChallengeMethod: codeChallengeMethod
