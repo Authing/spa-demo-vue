@@ -43,14 +43,15 @@ function enhancedLogin (codeChallengeDigestMethod = 'S256', codeChallengeMethod 
 
 /**
  * 
- * @param {String} customRedirectUri 
+ * 退出登录
  */
-function enhancedLogout (customRedirectUri = '') {
+function enhancedLogout () {
   const redirectUri = window.location.origin
   const idToken = localStorage.getItem('idToken')
+  let logoutUrl = ''
 
   if (idToken) {
-    this.buildLogoutUrl({
+    logoutUrl = this.buildLogoutUrl({
       expert: true,
       redirectUri,
       idToken
@@ -59,7 +60,7 @@ function enhancedLogout (customRedirectUri = '') {
 
   localStorage.clear()
 
-  window.location.href = customRedirectUri || redirectUri
+  window.location.href = logoutUrl || redirectUri
 }
 
 async function enchancedLoginCallback () {
