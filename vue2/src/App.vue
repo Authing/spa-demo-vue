@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { AuthingSPA } from "@authing/spa-auth-sdk";
+import { Authing } from "@authing/browser";
 
 export default {
   name: "App",
@@ -43,7 +43,7 @@ export default {
     };
   },
   created() {
-    this.sdk = new AuthingSPA({
+    this.sdk = new Authing({
       // 应用的认证地址，例如：https://domain.authing.cn
       domain: process.env.VUE_APP_SDK_DOMAIN,
 

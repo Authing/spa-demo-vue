@@ -29,12 +29,12 @@
 
 <script>
 import { defineComponent, onMounted, reactive, toRefs } from "vue";
-import { AuthingSPA } from "@authing/spa-auth-sdk";
+import { Authing } from "@authing/browser";
 
 export default defineComponent({
   name: "App",
   setup() {
-    const sdk = new AuthingSPA({
+    const sdk = new Authing({
       // 应用的认证地址，例如：https://domain.authing.cn
       domain: process.env.VUE_APP_SDK_DOMAIN,
 

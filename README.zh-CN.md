@@ -11,7 +11,7 @@
 
 ## 简介
 
-你可以使用 Authing 快速为新开发的或已有的 Vue 应用集成认证能力。此 Demo 程序将为你演示如何使用 Authing SPA SDK 为 Vue 应用添加认证能力。
+你可以使用 Authing 快速为新开发的或已有的 Vue 应用集成认证能力。此 Demo 程序将为你演示如何使用 Authing Browser SDK 为 Vue 应用添加认证能力。
 
 
 ## 参考文档
