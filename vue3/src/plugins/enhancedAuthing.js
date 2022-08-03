@@ -13,6 +13,7 @@ export function enhancedAuthing (app, options) {
   const authing = enchanceAuthing(new AuthenticationClient(options))
 
   app.provide('$authing', authing)
+  app.config.globalProperties.authing = this
 }
 
 /**

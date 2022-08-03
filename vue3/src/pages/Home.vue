@@ -5,16 +5,37 @@
   </div>
 </template>
 
-<script scoped setup>
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
-
+<script scoped>
 const message = 'This is home page ~~'
 
-const toLogin = () => {
-  router.push({
-    name: 'Login'
-  })
+// Composition API
+// import { useRouter } from 'vue-router'
+
+// const router = useRouter()
+
+// const toLogin = () => {
+//   router.push({
+//     name: 'Login'
+//   })
+// }
+
+
+// Options API
+export default {
+  data () {
+    return {
+      message
+    }
+  },
+  mounted () {
+    console.log('this: ', this.message)
+  },
+  methods: {
+    toLogin () {
+      this.$router.push({
+        name: 'Login'
+      })
+    }
+  }
 }
 </script>
