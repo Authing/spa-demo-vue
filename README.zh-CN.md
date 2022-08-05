@@ -4,8 +4,10 @@
   <img width="250" src="https://files.authing.co/authing-console/authing-logo-new-20210924.svg" />
 </div>
 
-<a href="https://forum.authing.cn/" target="_blank"><img src="https://img.shields.io/badge/chat-forum-blue" /></a>
-<a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/License-MIT-success" alt="License"></a>
+<div align=center>
+  <a href="https://forum.authing.cn/" target="_blank"><img src="https://img.shields.io/badge/chat-forum-blue" /></a>
+  <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/License-MIT-success" alt="License"></a>
+</div>
 
 **简体中文** | [English](./README.md)
 
